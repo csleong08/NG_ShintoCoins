@@ -1,0 +1,17 @@
+<p>Here you can browse all ShintoCoin transactions!</p>
+<table>
+  <tr>ShintoCoin Ledger</tr>
+  <tr>
+    <th>Action</th>
+    <th>Amount</th>
+    <th>Value</th>
+    <th> </th>
+
+  </tr>
+  <tr *ngFor="let order of Orders">
+    <td>{{ order.action }}</td>
+    <td>{{ order.amount }}</td>
+    <td>{{ order.value }}</td>
+    <td><button [routerLink]="['/details/', order.id ]">Details</button></td>
+  </tr>
+</table>
